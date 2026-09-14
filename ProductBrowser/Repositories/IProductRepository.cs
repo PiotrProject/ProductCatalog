@@ -6,5 +6,7 @@ namespace ProductBrowser.Repositories
     {
         IEnumerable<Product> GetAllProducts();
         Product Add (Product product);
+        Product? GetById(int id);
+        bool ExistsByCode(string code);
     }
 }

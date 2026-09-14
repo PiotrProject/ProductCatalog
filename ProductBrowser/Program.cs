@@ -9,13 +9,13 @@ builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS - pozwalamy frontendowi PHP na komunikację z API
+// CORS - pozwalamy frontendowi Angular na komunikację z API
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:8080")
+            .WithOrigins("http://localhost:4200")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });

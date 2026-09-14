@@ -26,5 +26,18 @@ namespace ProductBrowser.Repositories
                 return product;
             }
         }
+        public Product? GetById(int id)
+        {
+            return _products.FirstOrDefault(product => product.Id == id);
+        }
+
+        public bool ExistsByCode(string code)
+        {
+            return _products.Any(product =>
+                product.Kod.Equals(
+                    code,
+                    StringComparison.OrdinalIgnoreCase
+                ));
+        }
     }
 }
