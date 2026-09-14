@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="ProductBrowser/ProductBrowser.csproj" />
+  <Project Path="ProductBrowserTests/ProductBrowserTests.csproj" Id="35e47892-8d14-4c21-a489-223250f66462" />
 </Solution>
